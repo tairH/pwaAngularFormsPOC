@@ -1,0 +1,13 @@
+<div style="text-align:center">
+   
+  </div>
+  <app-add-medicine></app-add-medicine>
+  <div>
+    <ul style="list-style-type: none;">
+      <li *ngFor="let item of medicines" class="todo-item">
+        <span [ngClass]="{ inactive: item.FDAApprove }">{{ item|json }}</span>
+  
+        <button class="todo-item-button" (click)="markAsApproved(item)">Mark As Approved</button>
+      </li>
+    </ul>
+  </div>

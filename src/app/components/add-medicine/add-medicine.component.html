@@ -1,0 +1,6 @@
+<div>
+    <form (ngSubmit)="addMedicine()" [formGroup]="form">
+      <input type="text" formControlName="value" />
+      <button [disabled]="form.invalid">Add Medicine</button>
+    </form>
+  </div>
